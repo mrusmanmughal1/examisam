@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up -Agent-protal-Examism</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js CDN -->
+    <!-- Favicons -->
+    <link href="../assets/logo.png" rel="icon" />
+    <link href="../assets/logo.png" rel="apple-touch-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/Responsive.css" rel="stylesheet" />
+
+    <!-- Font Awesome 6 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnH2N2b36RJ1u9aF0mzC+Z+po9gxYzNPoE2a7L4x5u9s8EbC6vprM+ha1MUKMka2O2yY4fZ3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="position-relative bg-white d-flex p-0">
+      <!-- sidebar  -->
+      <div class="sidebar border-end border border-2 border-light pb-3">
+        <nav class="navbar-links font-popins">
+          <div class="mb-4 d-flex justify-content-center">
+            <a href="index.html" class="navbar-brand mx-auto p-0">
+              <img src="../assets/logo.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="navbar-nav w-100">
+            <ul class="ps-3">
+              <li class="d-flex align-items-center">
+                <i class="bi bi-ui-checks-grid me-2"></i>
+                <a href="Dashboard.html" class="nav-item">General Dashboard</a>
+              </li>
+
+              <p class="px-3 text-secondary small my-2">CATALOG</p>
+
+              <li class=" ">
+                <a href="products.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-bricks me-2"></i>
+                  <span>Products</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="exam.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-calendar-plus me-2"></i>
+
+                  <span>Exams</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="orders.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-calendar-check me-2"></i>
+
+                  <span>Orders</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="Bookings.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-calendar-week me-2"></i>
+
+                  <span>Bookings</span></a
+                >
+              </li>
+              <p class="px-3 text-secondary small my-2">USERS</p>
+              <li class=" ">
+                <a
+                  href="EmployeeList.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-person me-2"></i>
+
+                  <span>Employees</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="AgentList.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-people me-2"></i>
+
+                  <span>Agents</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="Role-Manager.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-person-lines-fill me-2"></i>
+
+                  <span>Roles Manager</span></a
+                >
+              </li>
+              <p class="px-3 text-secondary small my-2">FINANCE</p>
+              <li class=" ">
+                <a
+                  href="General-sales-reports.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span> General Sales Report</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="Incomming-payments.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Incoming Payments</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="Store-credit-payouts.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Store Credit Payouts</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="KuickPay-verification.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Kuickpay Verifications</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="Pay-fast.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Payfast Verifications</span></a
+                >
+              </li>
+              <p class="px-3 text-secondary small my-2">Support</p>
+              <li class=" ">
+                <a href="#" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-patch-check me-2"></i>
+                  <span>Conversations/ FAQs</span></a
+                >
+              </li>
+            </ul>
+
+            <div class="">
+              <ul class="p-0 mx-3">
+                <li class="d-flex">
+                  <i class="bi bi-box-arrow-left text-danger me-2"></i>
+                  <a href="index.html" class="text-danger"> Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- content  -->
+      <div class="w-100 admin-main">
+        <!-- navbar  -->
+        <nav class="row w-100 border-bottom border-light border-2 px-4 py-2">
+          <div class="col-6 d-flex align-items-center">
+            <div class="w-75">
+              <span class="fs-5">General Sales Report </span>
+            </div>
+          </div>
+          <div
+            class="col-6 d-block d-md-none order-2 d-flex align-items-center justify-content-end"
+            id="listButton"
+          >
+            <i class="bi bi-list fs-2" id="listIcon"></i>
+          </div>
+          <div
+            class="col-6 p-0 d-flex justify-content-lg-end align-items-center"
+          >
+            <div
+              class="border-2 border border-light p-1 px-2 rounded-md position-relative"
+            >
+              <div
+                id="notifications-tab"
+                class="position-absolute py-1 bg-white rounded-md notifications-tab card-shadow-2"
+              >
+                <div class="p-2 px-3 border-bottom h6 fw-bold">
+                  Notifications
+                </div>
+                <div class="">
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img
+                        src="../assets/images/dashboard/hot_16523929 1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img src="../assets/images/dashboard/heart.png" alt="" />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img
+                        src="../assets/images/dashboard/hot_16523929 1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img src="../assets/images/dashboard/heart.png" alt="" />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="border-top text-secondary p-2 small text-center">
+                    See all notifications
+                  </div>
+                </div>
+              </div>
+              <i
+                class="bi bi-bell fs-4"
+                id="bell-icon"
+                style="cursor: pointer"
+              ></i>
+            </div>
+            <div class="">
+              <ul class="ps-2 mb-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="../assets/images/dashboard/flags/UK Flag.png"
+                      alt=""
+                      class="rounded"
+                    />
+                  </a>
+                  <ul class="dropdown-menu">
+                    <div class=" ">
+                      <p class="small ms-4">Select Country</p>
+                      <hr />
+                    </div>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex justify-content-between"
+                        href="#"
+                      >
+                        <img
+                          src="../assets/images/dashboard/flags/UK Flag.png"
+                          alt=""
+                        />
+                        <i class="bi bi-check2"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img
+                          src="../assets/images/dashboard/flags/UK Flag.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img
+                          src="../assets/images/dashboard/flags/UK Flag.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex align-items-center position-relative">
+              <div
+                id="account-tab"
+                class="position-absolute bg-white rounded-md account-tab"
+                style="box-shadow: 0px 9px 40px 0px rgba(0, 0, 0, 0.1)"
+              >
+                <div class="p-2 px-3 border-bottom border-2 border-light">
+                  <a href="Manage-Account.html" class="d-flex gap-2">
+                    <div class="">
+                      <img src="../assets/images/dashboard/top3.png" alt="" />
+                    </div>
+                    <span> Manage Account</span>
+                  </a>
+                </div>
+                <div class="p-2 px-3 border-bottom border-2 border-light">
+                  <a href="Change-Password.html" class="d-flex gap-2">
+                    <div class="">
+                      <img src="../assets/images/dashboard/top1.png" alt="" />
+                    </div>
+                    <span> Change Password</span>
+                  </a>
+                </div>
+                <div class="p-2 px-3">
+                  <a href="" class="d-flex gap-2">
+                    <div class="">
+                      <img src="../assets/images/dashboard/top2.png" alt="" />
+                    </div>
+                    <span> Log out</span>
+                  </a>
+                </div>
+              </div>
+              <img
+                src="../assets/images/dashboard/flags/UK Flag.png"
+                class="rounded-pill"
+                width="35px"
+                height="35px"
+                alt=""
+              />
+              <div class="mx-3 lh-sm">
+                <p class="m-0 fw-bold fs-6">User XYZ</p>
+                <small class="m-0">Admin</small>
+              </div>
+              <div class="d-flex justify-content-end align-items-center">
+                <div class="border border px-1 rounded-pill">
+                  <i
+                    class="bi bi-arrow-down-short pe-auto"
+                    id="accountbtn"
+                    style="cursor: pointer"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- navbar  ends -->
+
+        <!-- dashboard Content  -->
+
+        <div class="container-fluid p-4">
+          <div class="">
+            <div class="d-flex me-md-5 justify-content-between">
+              <p class="fs-5 my-4 mt-0">Sales Report</p>
+              <div class="">
+                <span class="small">Jan 01- Jan 28 </span>
+                <span class="ms-3"><i class="bi bi-three-dots"></i></span>
+              </div>
+            </div>
+            <div class=" ">
+              <div class="row">
+                <div class="col-lg-4 col-xl-3 col-6">
+                  <div
+                    class="card border-2 rounded-md card-shadow h-100"
+                    style="
+                      background-color: #cf3da632;
+                      border: 2px solid #cf3da6;
+                    "
+                  >
+                    <div class="card-body p-3 px-md-4 px-1">
+                      <div
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <div class="text-center">
+                          <h3 class="fw-bold mb-0">$57450</h3>
+                          <p
+                            class="text-muted mb-1 d-flex align-items-center justify-content-center gap-2"
+                          >
+                            <i
+                              class="bi bi-arrow-down-left-circle text-success"
+                            ></i>
+                            <span>Incoming</span>
+                          </p>
+                          <p style="font-size: 14px">
+                            <span class="text-success">
+                              <i class="bi bi-arrow-up-left"></i> 16%</span
+                            >
+                            <span class="text-muted"
+                              >increase from last week</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-6">
+                  <div
+                    class="card border-2 rounded-md card-shadow h-100"
+                    style="
+                      background-color: #ffc96b27;
+                      border: 2px solid #d1840066;
+                    "
+                  >
+                    <div class="card-body p-3 px-md-4 px-1">
+                      <div
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <div class="text-center">
+                          <h3 class="fw-bold mb-0">$57450</h3>
+                          <p
+                            class="text-muted mb-1 d-flex align-items-center justify-content-center gap-2"
+                          >
+                            <i
+                              class="bi bi-arrow-down-left-circle text-danger"
+                            ></i>
+                            <span>Store Credit Given</span>
+                          </p>
+                          <p style="font-size: 14px">
+                            <span class="text-success">
+                              <i class="bi bi-arrow-up-left"></i> 16%</span
+                            >
+                            <span class="text-muted"
+                              >increase from last week</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-6">
+                  <div
+                    class="card border-2 rounded-md card-shadow h-100"
+                    style="
+                      background-color: #71cff829;
+                      border: 2px solid #1f96ad66;
+                    "
+                  >
+                    <div class="card-body p-3 px-md-4 px-1">
+                      <div
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <div class="text-center">
+                          <h3 class="fw-bold mb-0">$57450</h3>
+                          <p
+                            class="text-muted mb-1 d-flex align-items-center justify-content-center gap-2"
+                          >
+                            <i class="bi bi-coin"></i>
+                            <span>Total Revenue</span>
+                          </p>
+                          <p style="font-size: 14px">
+                            <span class="text-success">
+                              <i class="bi bi-arrow-up-left"></i> 16%</span
+                            >
+                            <span class="text-muted"
+                              >increase from last week</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-6">
+                  <div
+                    class="card border-2 rounded-md card-shadow h-100"
+                    style="
+                      background-color: #ffc96b27;
+                      border: 2px solid #d1840066;
+                    "
+                  >
+                    <div class="card-body p-3 px-md-4 px-1">
+                      <div
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <div class="text-center">
+                          <h3 class="fw-bold mb-0">$57450</h3>
+                          <p
+                            class="text-muted mb-1 d-flex align-items-center justify-content-center gap-2"
+                          >
+                            <i class="bi bi-wallet2"></i>
+                            <span>Total Profit</span>
+                          </p>
+                          <p style="font-size: 14px">
+                            <span class="text-danger">
+                              <i class="bi bi-arrow-down-left"></i> 16%</span
+                            >
+                            <span class="text-muted"
+                              >increase from last week</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 border p-2" id="bars">
+            <canvas id="stackedBarChart" height="100"></canvas>
+          </div>
+
+          <div class="mt-4">
+            <div class="mb-3 d-md-flex justify-content-between">
+              <span class="fw-bold fs-5">
+                <i class="bi bi-arrow-down-left-circle text-success"></i>
+                Incoming Transactions
+              </span>
+
+              <div class="position-relative d-md-flex gap-2 agent">
+                <div
+                  class="p-4 filter-box position-absolute bottom-75 shadow-sm bg-white rounded-md"
+                  id="filterBox"
+                  style="display: none"
+                >
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="" id="old" />
+                    <label for="old">Bold To New</label>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="new" id="new" />
+                    <label for="new">New To Old</label>
+                  </div>
+                  <div class="p-2 text-center">
+                    <button class="px-5 border rounded-pill bg-white py-2 mt-2">
+                      Done
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="">
+                    <button
+                      id="filterBtn"
+                      type="button"
+                      class="d-flex gap-2 px-4 py-2 rounded-pill bg-primary-color text-white border shadow-sm"
+                    >
+                      <i class="bi bi-cloud-download"></i> <span>Download</span>
+                    </button>
+                  </div>
+                  <div class="">
+                    <button
+                      id="filterBtn"
+                      type="button"
+                      class="d-flex gap-2 px-4 py-2 rounded-pill bg-light bg-white border shadow-sm"
+                    >
+                      <i class="bi bi-sliders2"></i> <span>Filter</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0 shadow rounded-md">
+              <div class="bg-white rounded-md p-2">
+                <div class="rounded-md table-responsive">
+                  <table class="table rounded-md Nunito" id="example">
+                    <thead
+                      style="
+                        background-color: #f8f8f8;
+                        text-align: left;
+                        color: rgb(144, 144, 144);
+                      "
+                    >
+                      <tr>
+                        <th scope="col " class="pt-4 ps-4">Agent Name</th>
+                        <th scope="col" class="pt-4">Agent ID</th>
+                        <th scope="col" class="pt-4">Consumer Number</th>
+                        <th scope="col" class="pt-4">Amount</th>
+                        <th scope="col" class="pt-4">Date</th>
+                        <th scope="col" class="pt-4">Time</th>
+                        <th scope="col" class="pt-4">Category</th>
+                        <th scope="col" class="pt-4">Bank Information</th>
+                        <th scope="col" class="pt-4">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-secondary">
+                      <tr class="m-lg-5">
+                        <td class="py-lg-4 small ps-4">M. Usman</td>
+                        <td class="py-lg-4">
+                          <div class="d-flex gap-2 align-items-center">
+                            <span class="text-secondary">99999999 </span>
+                          </div>
+                        </td>
+                        <td class="py-lg-4">222222</td>
+                        <td class="py-lg-4">$300</td>
+                        <td class="py-lg-4">
+                          <p class="m-0">Sep 12, 2028</p>
+                        </td>
+                        <td class="py-lg-4">
+                          <span>12:02:34 PM</span>
+                        </td>
+                        <td class="py-lg-4">Kuickpay</td>
+                        <td class="py-lg-4">
+                          <p class="m-0">ID: 12657199810</p>
+                          <p class="m-0 small">Meezan Bank</p>
+                        </td>
+                        <td class="py-lg-4">
+                          <div class="d-flex ps-3 gap-3">
+                            <i class="bi bi-trash3"></i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <button
+                class="text-center w-100 p-2 mt-3 fw-bold font-primary rounded-md border-0"
+                style="background-color: #cf3da61a"
+              >
+                View All Agent
+              </button>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="mb-3 d-md-flex gap-2 justify-content-between">
+              <span class="fw-bold fs-5">
+                <i class="bi bi-arrow-up-right-circle text-danger"></i>
+                Store Credit Payout
+              </span>
+
+              <div
+                class="position-relative agent d-flex justify-content-between"
+              >
+                <div
+                  class="p-4 filter-box position-absolute bottom-75 shadow-sm bg-white rounded-md"
+                  id="filterBox"
+                  style="display: none"
+                >
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="" id="old" />
+                    <label for="old">Bold To New</label>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="new" id="new" />
+                    <label for="new">New To Old</label>
+                  </div>
+                  <div class="p-2 text-center">
+                    <button class="px-5 border rounded-pill bg-white py-2 mt-2">
+                      Done
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <div class="">
+                    <button
+                      id="filterBtn"
+                      type="button"
+                      class="d-flex gap-2 px-4 py-2 rounded-pill bg-primary-color text-white border shadow-sm"
+                    >
+                      <i class="bi bi-cloud-download"></i> <span>Download</span>
+                    </button>
+                  </div>
+                  <div class="">
+                    <button
+                      id="filterBtn"
+                      type="button"
+                      class="d-flex gap-2 px-4 py-2 rounded-pill bg-light bg-white border shadow-sm"
+                    >
+                      <i class="bi bi-sliders2"></i> <span>Filter</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0 shadow rounded-md">
+              <div class="bg-white rounded-md p-2">
+                <div class="rounded-md table-responsive">
+                  <table class="table rounded-md Nunito" id="example1">
+                    <thead
+                      style="
+                        background-color: #f8f8f8;
+                        text-align: left;
+                        color: rgb(144, 144, 144);
+                      "
+                    >
+                      <tr>
+                        <th scope="col " class="pt-4 ps-4">Transaction ID.</th>
+                        <th scope="col" class="pt-4">Agent Name</th>
+                        <th scope="col" class="pt-4">Agent ID</th>
+                        <th scope="col" class="pt-4">Date</th>
+                        <th scope="col" class="pt-4">Time</th>
+                        <th scope="col" class="pt-4">Amount</th>
+                        <th scope="col" class="pt-4">Voucher Bought</th>
+                        <th scope="col" class="pt-4">Quantity</th>
+                        <th scope="col" class="pt-4">Status</th>
+                        <th scope="col" class="pt-4">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-secondary">
+                      <tr class="m-lg-5">
+                        <td class="py-lg-4 small ps-4">#9999901</td>
+                        <td class="py-lg-4">
+                          <div class="d-flex gap-2 align-items-center">
+                            <span class="text-secondary">M.Shehzad </span>
+                          </div>
+                        </td>
+                        <td class="py-lg-4 small">90028292</td>
+                        <td class="py-lg-4">23, Sep 2020</td>
+                        <td class="py-lg-4">
+                          <p class="m-0">12 :20 PM</p>
+                        </td>
+                        <td class="py-lg-4">
+                          <span>$400</span>
+                        </td>
+                        <td class="py-lg-4">
+                          <span> Pearson PTE</span>
+                        </td>
+                        <td class="py-lg-4">
+                          <p class="m-0">1</p>
+                        </td>
+                        <td class="py-lg-4">
+                          <div class="text-success">Pending</div>
+                        </td>
+                        <td class="py-lg-4">
+                          <div class="d-flex ps-3 gap-3">
+                            <i class="bi bi-trash3"></i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <button
+                class="text-center w-100 p-2 mt-3 fw-bold font-primary rounded-md border-0"
+                style="background-color: #cf3da61a"
+              >
+                View All Agent
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Existing filterBtn code...
+        document
+          .getElementById("filterBtn")
+          .addEventListener("click", function () {
+            var box = document.getElementById("filterBox");
+            if (box.style.display === "none" || box.style.display === "") {
+              box.style.display = "block";
+            } else {
+              box.style.display = "none";
+            }
+          });
+
+        // Stacked Bar Chart
+        var ctx = document.getElementById("stackedBarChart").getContext("2d");
+        var stackedBarChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Monday",
+              "Tuesday",
+              "Wednessday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            datasets: [
+              {
+                label: "Sales",
+                data: [120, 150, 180, 90, 200],
+                backgroundColor: "rgba(54, 162, 235, 0.7)",
+              },
+            ],
+          },
+          options: {
+            plugins: {
+              title: {
+                display: true,
+                text: "Monthly Sales and Returns",
+              },
+            },
+            responsive: true,
+            scales: {
+              x: {
+                stacked: true,
+              },
+              y: {
+                stacked: true,
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      });
+    </script>
+    <!-- js file  -->
+    <script src="../assets/js/script.js"></script>
+    <!-- js file  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+    <script>
+      new DataTable("#example");
+    </script>
+    <script>
+      new DataTable("#example1");
+    </script>
+  </body>
+</html>

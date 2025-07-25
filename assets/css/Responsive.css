@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+  .w-75-res{
+    width: 100% !important;
+  }
+  .w-50-res{
+    width: 100% !important;
+  }
+  .sidebar {
+    position: absolute;
+    width: 0%;
+    background-color: white;
+  }
+
+  .notifications-tab {
+    display: none;
+    width:330px;
+    top: 100%;
+    right: 1rem;
+    z-index: 99;
+    left: 0;
+}
+  .admin-main {
+    margin-left: 0px;
+  }
+  .admin-main nav > div:first-of-type {
+    display: none !important;
+  }
+  .new-member-grid{
+    grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1rem;
+
+  }
+  
+}
+
+
+

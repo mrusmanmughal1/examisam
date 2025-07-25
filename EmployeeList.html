@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up -Agent-protal-Examism</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js CDN -->
+    <!-- Favicons -->
+    <link href="../assets/logo.png" rel="icon" />
+    <link href="../assets/logo.png" rel="apple-touch-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/Responsive.css" rel="stylesheet" />
+
+    <!-- Font Awesome 6 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnH2N2b36RJ1u9aF0mzC+Z+po9gxYzNPoE2a7L4x5u9s8EbC6vprM+ha1MUKMka2O2yY4fZ3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="position-relative bg-white d-flex p-0">
+      <!-- sidebar  -->
+      <div class="sidebar border-end border border-2 border-light pb-3">
+        <nav class="navbar-links font-popins">
+          <div class="mb-4 d-flex justify-content-center">
+            <a href="index.html" class="navbar-brand mx-auto p-0">
+              <img src="../assets/logo.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="navbar-nav w-100">
+            <ul class="ps-3">
+              <li class="d-flex align-items-center">
+                <i class="bi bi-ui-checks-grid me-2"></i>
+                <a href="Dashboard.html" class="nav-item">General Dashboard</a>
+              </li>
+
+              <p class="px-3 text-secondary small my-2">CATALOG</p>
+
+              <li class=" ">
+                <a href="products.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-bricks me-2"></i>
+                  <span>Products</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="exam.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-calendar-plus me-2"></i>
+
+                  <span>Exams</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="orders.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-calendar-check me-2"></i>
+
+                  <span>Orders</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="Bookings.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-calendar-week me-2"></i>
+
+                  <span>Bookings</span></a
+                >
+              </li>
+              <p class="px-3 text-secondary small my-2">USERS</p>
+              <li class=" ">
+                <a
+                  href="EmployeeList.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-person me-2"></i>
+
+                  <span>Employees</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="AgentList.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-people me-2"></i>
+
+                  <span>Agents</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="Role-Manager.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-person-lines-fill me-2"></i>
+
+                  <span>Roles Manager</span></a
+                >
+              </li>
+              <p class="px-3 text-secondary small my-2">FINANCE</p>
+              <li class=" ">
+                <a
+                  href="General-sales-reports.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span> General Sales Report</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="Incomming-payments.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Incoming Payments</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="Store-credit-payouts.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Store Credit Payouts</span></a
+                >
+              </li>
+              <li class=" ">
+                <a
+                  href="KuickPay-verification.html"
+                  class="nav-item has-dropdown collapsed"
+                >
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Kuickpay Verifications</span></a
+                >
+              </li>
+              <li class=" ">
+                <a href="Pay-fast.html" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-card-heading me-2"></i>
+
+                  <span>Payfast Verifications</span></a
+                >
+              </li>
+              <p class="px-3 text-secondary small my-2">Support</p>
+              <li class=" ">
+                <a href="#" class="nav-item has-dropdown collapsed">
+                  <i class="bi bi-patch-check me-2"></i>
+                  <span>Conversations/ FAQs</span></a
+                >
+              </li>
+            </ul>
+
+            <div class="">
+              <ul class="p-0 mx-3">
+                <li class="d-flex">
+                  <i class="bi bi-box-arrow-left text-danger me-2"></i>
+                  <a href="index.html" class="text-danger"> Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- content  -->
+      <div class="w-100 admin-main">
+        <!-- navbar  -->
+        <nav class="row w-100 border-bottom border-light border-2 px-4 py-2">
+          <div class="col-6 d-flex align-items-center">
+            <div class="w-75">
+              <span class="fs-5">Employees List</span>
+            </div>
+          </div>
+          <div
+            class="col-6 d-block d-md-none order-2 d-flex align-items-center justify-content-end"
+            id="listButton"
+          >
+            <i class="bi bi-list fs-2" id="listIcon"></i>
+          </div>
+          <div
+            class="col-6 p-0 d-flex justify-content-lg-end align-items-center"
+          >
+            <div
+              class="border-2 border border-light p-1 px-2 rounded-md position-relative"
+            >
+              <div
+                id="notifications-tab"
+                class="position-absolute py-1 bg-white rounded-md notifications-tab card-shadow-2"
+              >
+                <div class="p-2 px-3 border-bottom h6 fw-bold">
+                  Notifications
+                </div>
+                <div class="">
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img
+                        src="../assets/images/dashboard/hot_16523929 1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img src="../assets/images/dashboard/heart.png" alt="" />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img
+                        src="../assets/images/dashboard/hot_16523929 1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 notification-hover p-3">
+                    <div class=" ">
+                      <img src="../assets/images/dashboard/heart.png" alt="" />
+                    </div>
+                    <div class="w-100 lh-sm">
+                      <div class="d-flex justify-content-between fw-bold small">
+                        <div class="">Trending</div>
+                        <div class="">9:08 AM</div>
+                      </div>
+                      <small style="font-size: 12px" class=""
+                        >The PTE Vouchers booking is trending right now.</small
+                      >
+                    </div>
+                  </div>
+                  <div class="border-top text-secondary p-2 small text-center">
+                    See all notifications
+                  </div>
+                </div>
+              </div>
+              <i
+                class="bi bi-bell fs-4"
+                id="bell-icon"
+                style="cursor: pointer"
+              ></i>
+            </div>
+            <div class="">
+              <ul class="ps-2 mb-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="../assets/images/dashboard/flags/UK Flag.png"
+                      alt=""
+                      class="rounded"
+                    />
+                  </a>
+                  <ul class="dropdown-menu">
+                    <div class=" ">
+                      <p class="small ms-4">Select Country</p>
+                      <hr />
+                    </div>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex justify-content-between"
+                        href="#"
+                      >
+                        <img
+                          src="../assets/images/dashboard/flags/UK Flag.png"
+                          alt=""
+                        />
+                        <i class="bi bi-check2"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img
+                          src="../assets/images/dashboard/flags/UK Flag.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img
+                          src="../assets/images/dashboard/flags/UK Flag.png"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex align-items-center position-relative">
+              <div
+                id="account-tab"
+                class="position-absolute bg-white rounded-md account-tab"
+                style="box-shadow: 0px 9px 40px 0px rgba(0, 0, 0, 0.1)"
+              >
+                <div class="p-2 px-3 border-bottom border-2 border-light">
+                  <a href="Manage-Account.html" class="d-flex gap-2">
+                    <div class="">
+                      <img src="../assets/images/dashboard/top3.png" alt="" />
+                    </div>
+                    <span> Manage Account</span>
+                  </a>
+                </div>
+                <div class="p-2 px-3 border-bottom border-2 border-light">
+                  <a href="Change-Password.html" class="d-flex gap-2">
+                    <div class="">
+                      <img src="../assets/images/dashboard/top1.png" alt="" />
+                    </div>
+                    <span> Change Password</span>
+                  </a>
+                </div>
+                <div class="p-2 px-3">
+                  <a href="" class="d-flex gap-2">
+                    <div class="">
+                      <img src="../assets/images/dashboard/top2.png" alt="" />
+                    </div>
+                    <span> Log out</span>
+                  </a>
+                </div>
+              </div>
+              <img
+                src="../assets/images/dashboard/flags/UK Flag.png"
+                class="rounded-pill"
+                width="35px"
+                height="35px"
+                alt=""
+              />
+              <div class="mx-3 lh-sm">
+                <p class="m-0 fw-bold fs-6">User XYZ</p>
+                <small class="m-0">Admin</small>
+              </div>
+              <div class="d-flex justify-content-end align-items-center">
+                <div class="border border px-1 rounded-pill">
+                  <i
+                    class="bi bi-arrow-down-short pe-auto"
+                    id="accountbtn"
+                    style="cursor: pointer"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- navbar  ends -->
+
+        <!-- dashboard Content  -->
+
+        <div class="container-fluid p-4">
+          <div class="">
+            <p class="fs-4 my-4 mt-0">Employees List</p>
+            <div class=" ">
+              <div class="row">
+                <div class="col-lg-4 col-xl-3 col-6">
+                  <div class="card border-0 rounded-md card-shadow h-100">
+                    <div class="card-body p-3 px-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <p class="text-muted mb-1">Total Employees</p>
+                          <h3 class="fw-bold">57450</h3>
+                        </div>
+                        <div class="">
+                          <img src="assets/images/agent-icon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-6">
+                  <div class="card border-0 rounded-md card-shadow h-100">
+                    <div class="card-body p-3 px-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <p class="text-muted mb-1">Active Employees</p>
+                          <h3 class="fw-bold">12789</h3>
+                        </div>
+                        <div class="">
+                          <img src="assets/images/agent-icon.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <div class="d-flex gap-3 border rounded-md p-2 mb-5 w-md-75">
+              <button
+                id="btnagent"
+                class="w-100 border-0 text-secondary rounded-md fw-bold active-emp-list p-2"
+              >
+                Verification Agents <span> (23)</span>
+              </button>
+              <button
+                id="btnBooking"
+                class="w-100 border-0 rounded-md text-secondary fw-bold bg-light p-2"
+              >
+                Booking Agents <span> (20)</span>
+              </button>
+              <button
+                id="btnSupervisor"
+                class="w-100 bg-light border-0 text-secondary fw-bold rounded-md p-2"
+              >
+                Supervisor <span> (1)</span>
+              </button>
+            </div>
+            <div class="" id="table-verification">
+              <div class="mb-3 d-flex justify-content-between">
+                <span class="fw-bold fs-5"> Verification Agents List </span>
+
+                <div class="position-relative agent">
+                  <div
+                    class="p-4 filter-box position-absolute bottom-75 shadow-sm bg-white rounded-md"
+                    id="filterBox"
+                    style="display: none"
+                  >
+                    <div class="d-flex gap-3">
+                      <input type="checkbox" name="" id="old" />
+                      <label for="old">Bold To New</label>
+                    </div>
+                    <div class="d-flex gap-3">
+                      <input type="checkbox" name="new" id="new" />
+                      <label for="new">New To Old</label>
+                    </div>
+                    <div class="p-2 text-center">
+                      <button
+                        class="px-5 border rounded-pill bg-white py-2 mt-2"
+                      >
+                        Done
+                      </button>
+                    </div>
+                  </div>
+                  <button
+                    id="filterBtn"
+                    type="button"
+                    class="d-flex gap-2 px-4 py-2 rounded-pill bg-primary-color text-white border shadow-sm"
+                  >
+                    <i class="bi bi-plus-circle"></i>
+                    <span>Add New VA Agent</span>
+                  </button>
+                </div>
+              </div>
+              <div class="p-4 pt-0 shadow rounded-md">
+                <div class="bg-white rounded-md p-2">
+                  <div class="rounded-md table-responsive">
+                    <table class="table rounded-md Nunito" id="agent">
+                      <thead
+                        style="
+                          background-color: #f8f8f8;
+                          text-align: left;
+                          color: rgb(144, 144, 144);
+                        "
+                      >
+                        <tr>
+                          <th scope="col " class="pt-4 ps-4">Sr No.</th>
+                          <th scope="col" class="pt-4">Employee Name</th>
+                          <th scope="col" class="pt-4">Phone Number</th>
+                          <th scope="col" class="pt-4">E-mail Address</th>
+                          <th scope="col" class="pt-4">Business Address</th>
+                          <th scope="col" class="pt-4">
+                            Verifications completed
+                          </th>
+                          <th scope="col" class="pt-4 no-wrap">
+                            Verifications In Process
+                          </th>
+                          <th scope="col" class="pt-4">Status</th>
+                          <th scope="col" class="pt-4">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-secondary">
+                        <tr class="m-lg-5">
+                          <td class="py-lg-4 small ps-4">01</td>
+                          <td class="py-lg-4">
+                            <div class="d-flex gap-2 align-items-center">
+                              <span class="text-secondary">M.Shehzad </span>
+                            </div>
+                          </td>
+                          <td class="py-lg-4 small">Aspire Education</td>
+                          <td class="py-lg-4">Sawat</td>
+                          <td class="py-lg-4">
+                            <p class="m-0">0300 6256199</p>
+                          </td>
+                          <td class="py-lg-4">
+                            <span>userxyz@gmail.com</span>
+                          </td>
+                          <td class="py-lg-4">2nd Floor ,Office 15,Lahore</td>
+                          <td class="py-lg-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              class="bi bi-copy"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                              />
+                            </svg>
+                          </td>
+                          <td class="py-lg-4">
+                            <div class="d-flex gap-3">
+                              <i
+                                class="bi bi-check-circle text-success fs-4"
+                              ></i>
+
+                              <i class="bi bi-x-circle text-danger fs-4"></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <button
+                  class="text-center w-100 p-2 mt-3 font-primary rounded-md border-0"
+                  style="background-color: #cf3da61a"
+                >
+                  View All Agent
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4" id="table-booking" style="display: none">
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="fw-bold fs-5"> Booking Agents LIst</span>
+
+              <div class="position-relative agent">
+                <div
+                  class="p-4 filter-box position-absolute bottom-75 shadow-sm bg-white rounded-md"
+                  id="filterBox"
+                  style="display: none"
+                >
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="" id="old" />
+                    <label for="old">Bold To New</label>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="new" id="new" />
+                    <label for="new">New To Old</label>
+                  </div>
+                  <div class="p-2 text-center">
+                    <button class="px-5 border rounded-pill bg-white py-2 mt-2">
+                      Done
+                    </button>
+                  </div>
+                </div>
+                <button
+                  id="filterBtn"
+                  type="button"
+                  class="d-flex gap-2 px-4 py-2 rounded-pill bg-primary-color text-white border shadow-sm"
+                >
+                  <i class="bi bi-plus-circle"></i>
+                  <span>Add New BA Agent</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-4 pt-0 shadow rounded-md">
+              <div class="bg-white rounded-md p-2">
+                <div class="rounded-md table-responsive">
+                  <table class="table rounded-md Nunito" id="Booking">
+                    <thead
+                      style="
+                        background-color: #f8f8f8;
+                        text-align: left;
+                        color: rgb(144, 144, 144);
+                      "
+                    >
+                      <tr>
+                        <th scope="col " class="pt-4 ps-4">Sr No.</th>
+                        <th scope="col" class="pt-4">Agent Name</th>
+                        <th scope="col" class="pt-4">Business Name</th>
+                        <th scope="col" class="pt-4">Business City</th>
+                        <th scope="col" class="pt-4">Store Credit</th>
+                        <th scope="col" class="pt-4">Phone Number</th>
+                        <th scope="col" class="pt-4" style="width: 350px">
+                          Business Address
+                        </th>
+                        <th scope="col" class="pt-4">Docs</th>
+                        <th scope="col" class="pt-4">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-secondary">
+                      <tr class="m-lg-5">
+                        <td class="py-lg-4 small ps-4">01</td>
+                        <td class="py-lg-4">
+                          <div class="d-flex gap-2 align-items-center">
+                            <span class="text-secondary">M.Shehzad </span>
+                          </div>
+                        </td>
+                        <td class="py-lg-4 small">Aspire Education</td>
+                        <td class="py-lg-4">Sawat</td>
+                        <td class="py-lg-4">
+                          <p class="m-0">0300 6256199</p>
+                        </td>
+                        <td class="py-lg-4">
+                          <span>userxyz@gmail.com</span>
+                        </td>
+                        <td class="py-lg-4">
+                          <span>2nd Floor,Office15,Lahore </span>
+                        </td>
+                        <td class="py-lg-4">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            class="bi bi-copy"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                            />
+                          </svg>
+                        </td>
+                        <td class="py-lg-4">
+                          <div class="d-flex gap-3">
+                            <i class="bi bi-check-circle text-success fs-4"></i>
+
+                            <i class="bi bi-x-circle text-danger fs-4"></i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <button
+                class="text-center w-100 p-2 mt-3 font-primary rounded-md border-0"
+                style="background-color: #cf3da61a"
+              >
+                View All Agent
+              </button>
+            </div>
+          </div>
+          <div class="mt-4" id="table-supervisor" style="display: none">
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="fw-bold fs-5"> Supervisior Agents LIst</span>
+
+              <div class="position-relative agent">
+                <div
+                  class="p-4 filter-box position-absolute bottom-75 shadow-sm bg-white rounded-md"
+                  id="filterBox"
+                  style="display: none"
+                >
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="" id="old" />
+                    <label for="old">Bold To New</label>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <input type="checkbox" name="new" id="new" />
+                    <label for="new">New To Old</label>
+                  </div>
+                  <div class="p-2 text-center">
+                    <button class="px-5 border rounded-pill bg-white py-2 mt-2">
+                      Done
+                    </button>
+                  </div>
+                </div>
+                <button
+                  id="filterBtn"
+                  type="button"
+                  class="d-flex gap-2 px-4 py-2 rounded-pill bg-primary-color text-white border shadow-sm"
+                >
+                  <i class="bi bi-plus-circle"></i>
+                  <span>Add New BA Agent</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-4 pt-0 shadow rounded-md">
+              <div class="bg-white rounded-md p-2">
+                <div class="rounded-md table-responsive">
+                  <table class="table rounded-md Nunito" id="Supervisior">
+                    <thead
+                      style="
+                        background-color: #f8f8f8;
+                        text-align: left;
+                        color: rgb(144, 144, 144);
+                      "
+                    >
+                      <tr>
+                        <th scope="col " class="pt-4 ps-4">Sr No.</th>
+                        <th scope="col" class="pt-4">Agent Name</th>
+                        <th scope="col" class="pt-4">Business Name</th>
+                        <th scope="col" class="pt-4">Business City</th>
+                        <th scope="col" class="pt-4">Store Credit</th>
+                        <th scope="col" class="pt-4">Phone Number</th>
+                        <th scope="col" class="pt-4" style="width: 350px">
+                          Business Address
+                        </th>
+                        <th scope="col" class="pt-4">Docs</th>
+                        <th scope="col" class="pt-4">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-secondary">
+                      <tr class="m-lg-5">
+                        <td class="py-lg-4 small ps-4">01</td>
+                        <td class="py-lg-4">
+                          <div class="d-flex gap-2 align-items-center">
+                            <span class="text-secondary">M.Shehzad </span>
+                          </div>
+                        </td>
+                        <td class="py-lg-4 small">Aspire Education</td>
+                        <td class="py-lg-4">Sawat</td>
+                        <td class="py-lg-4">
+                          <p class="m-0">0300 6256199</p>
+                        </td>
+                        <td class="py-lg-4">
+                          <span>userxyz@gmail.com</span>
+                        </td>
+                        <td class="py-lg-4">
+                          <span>2nd Floor,Office15,Lahore </span>
+                        </td>
+                        <td class="py-lg-4">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            class="bi bi-copy"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                            />
+                          </svg>
+                        </td>
+                        <td class="py-lg-4">
+                          <div class="d-flex gap-3">
+                            <i class="bi bi-check-circle text-success fs-4"></i>
+
+                            <i class="bi bi-x-circle text-danger fs-4"></i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <button
+                class="text-center w-100 p-2 mt-3 font-primary rounded-md border-0"
+                style="background-color: #cf3da61a"
+              >
+                View All Agent
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("filterBtn")
+          .addEventListener("click", function () {
+            var box = document.getElementById("filterBox");
+            if (box.style.display === "none" || box.style.display === "") {
+              box.style.display = "block";
+            } else {
+              box.style.display = "none";
+            }
+          });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Button elements
+        const btnAgent = document.getElementById("btnagent");
+        const btnBooking = document.getElementById("btnBooking");
+        const btnSupervisor = document.getElementById("btnSupervisor");
+
+        function setActive(btn) {
+          btnAgent.classList.remove("active-emp-list");
+          btnBooking.classList.remove("active-emp-list");
+          btnSupervisor.classList.remove("active-emp-list");
+          btn.classList.add("active-emp-list");
+        }
+
+        btnAgent.addEventListener("click", function () {
+          setActive(btnAgent);
+          // Optionally show/hide tables here
+        });
+        btnBooking.addEventListener("click", function () {
+          setActive(btnBooking);
+          // Optionally show/hide tables here
+        });
+        btnSupervisor.addEventListener("click", function () {
+          setActive(btnSupervisor);
+          // Optionally show/hide tables here
+        });
+      });
+    </script>
+    <!-- js file  -->
+    <script src="../assets/js/script.js"></script>
+    <!-- js file  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+    <script>
+      new DataTable("#agent");
+    </script>
+    <script>
+      new DataTable("#Booking");
+    </script>
+
+    <script>
+      new DataTable("#Supervisior");
+    </script>
+  </body>
+</html>
