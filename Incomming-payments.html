@@ -9,7 +9,10 @@
     <!-- Favicons -->
     <link href="../assets/logo.png" rel="icon" />
     <link href="../assets/logo.png" rel="apple-touch-icon" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -423,15 +426,33 @@
 
         <div class="container-fluid p-4">
           <div class="">
-            <div class="d-flex me-md-5 justify-content-between">
+            <div class="d-md-flex me-md-5 justify-content-between">
               <p class="fs-5 my-4 mt-0">Sales Report</p>
               <div class="">
-                <span class="small">Jan 01- Jan 28 </span>
-                <span class="ms-3"><i class="bi bi-three-dots"></i></span>
+                <div class="d-md-flex my-3 my-0 align-items-center gap-4">
+                  <div class="d-flex gap-2">
+                    <input
+                      type="text"
+                      id="datepicker"
+                      placeholder="MM-DD"
+                      class="border-0"
+                    />
+                    -
+                    <input
+                      type="text"
+                      id="datepicker2"
+                      placeholder="MM-DD"
+                      class="border-0"
+                    />
+                  </div>
+                  <div class="">
+                    <span class="ms-3"><i class="bi bi-three-dots"></i></span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class=" ">
-              <div class="row">
+              <div class="row g-2">
                 <div class="col-lg-4 col-xl-3 col-6">
                   <div
                     class="card border-2 rounded-md card-shadow h-100"
@@ -833,6 +854,39 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script>
       new DataTable("#example");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#datepicker", {
+        dateFormat: "m-d", // Only month and day
+        defaultDate: "today",
+        onReady: function (selectedDates, dateStr, instance) {
+          instance.currentYearElement.style.display = "none"; // Hide year dropdown
+        },
+        onChange: function (selectedDates, dateStr, instance) {
+          // Always use current year internally to prevent year from affecting output
+          const d = selectedDates[0];
+          const currentYear = new Date().getFullYear();
+          d.setFullYear(currentYear);
+          instance.input.value = flatpickr.formatDate(d, "m-d");
+        },
+      });
+    </script>
+    <script>
+      flatpickr("#datepicker2", {
+        dateFormat: "m-d", // Only month and day
+        defaultDate: "today",
+        onReady: function (selectedDates, dateStr, instance) {
+          instance.currentYearElement.style.display = "none"; // Hide year dropdown
+        },
+        onChange: function (selectedDates, dateStr, instance) {
+          // Always use current year internally to prevent year from affecting output
+          const d = selectedDates[0];
+          const currentYear = new Date().getFullYear();
+          d.setFullYear(currentYear);
+          instance.input.value = flatpickr.formatDate(d, "m-d");
+        },
+      });
     </script>
   </body>
 </html>

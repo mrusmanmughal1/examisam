@@ -88,3 +88,18 @@ radios.forEach((radio) => {
 });
 
 // bar
+setTimeout(() => {
+  const searchInput = document.querySelector('input[type="search"]');
+  if (searchInput) {
+    searchInput.placeholder = "Search this table...";
+    console.log("✅ Placeholder set.");
+  } else {
+    console.warn("❌ Search input not found.");
+  }
+}, 500); // give time for rendering
+
+function toggleSwitch(el) {
+  const icon = el.querySelector("i");
+  icon.classList.toggle("bi-toggle-off");
+  icon.classList.toggle("bi-toggle-on");
+}

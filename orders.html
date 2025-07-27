@@ -60,6 +60,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <style>
+      #datepicker,
+      #datepicker2 {
+        width: 2.8rem;
+      }
+    </style>
   </head>
   <body>
     <div class="position-relative bg-white d-flex p-0">
@@ -423,7 +434,37 @@
 
         <div class="container-fluid p-4">
           <div class="">
-            <p class="fs-4 fw-bold my-4 mt-0">Orders</p>
+            <div class="d-flex justify-content-between">
+              <p class="fs-4 fw-bold my-4 mt-0">Orders</p>
+              <div class="d-flex align-items-center gap-4">
+                <div class="d-flex gap-2">
+                  <input
+                    type="text"
+                    id="datepicker"
+                    placeholder="MM-DD"
+                    class="border-0"
+                  />
+                  -
+                  <input
+                    type="text"
+                    id="datepicker2"
+                    placeholder="MM-DD"
+                    class="border-0"
+                  />
+                </div>
+                <div class="">
+                  <div
+                    class="px-4 py-2 d-flex justify-content-center align-items-center rounded-pill bg-light"
+                  >
+                    <select name="" id="" class="bg-light border-0 small">
+                      <option value="">This Week</option>
+                      <option value="">This Month</option>
+                      <option value="">This Year</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class=" ">
               <div class="row">
                 <div class="col-lg-4 col-xl-3 col-6">
@@ -506,7 +547,7 @@
             <div class="p-4 pt-0 shadow rounded-md">
               <div class="bg-white rounded-md p-2">
                 <div class="rounded-md table-responsive">
-                  <table class="table rounded-md Nunito" id="example">
+                  <table class="table rounded-md text-secondary" id="example">
                     <thead style="background-color: #f8f8f8; text-align: left">
                       <tr>
                         <th scope="col " class="pt-4">ID</th>
@@ -516,7 +557,7 @@
                         <th scope="col" class="pt-4">AgentName</th>
                         <th scope="col" class="pt-4">Agent ID</th>
                         <th scope="col" class="pt-4">Amount</th>
-                        <th scope="col" class="pt-4">Payment Method</th>
+                        <th scope="col" class="pt-4 no-wrap">Payment Method</th>
                         <th scope="col" class="pt-4">Profit</th>
                         <th scope="col" class="pt-4">Transaction ID</th>
                       </tr>
@@ -557,12 +598,22 @@
                 </div>
               </div>
             </div>
+            <div class="">
+              <button
+                class="text-center fw-bold w-100 p-2 mt-3 font-primary rounded border-0"
+                style="background-color: #cf3da61a"
+              >
+                View All Orders
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- js file  -->
     <script src="../assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <!-- js file  -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
@@ -570,6 +621,39 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script>
       new DataTable("#example");
+    </script>
+
+    <script>
+      flatpickr("#datepicker", {
+        dateFormat: "m-d", // Only month and day
+        defaultDate: "today",
+        onReady: function (selectedDates, dateStr, instance) {
+          instance.currentYearElement.style.display = "none"; // Hide year dropdown
+        },
+        onChange: function (selectedDates, dateStr, instance) {
+          // Always use current year internally to prevent year from affecting output
+          const d = selectedDates[0];
+          const currentYear = new Date().getFullYear();
+          d.setFullYear(currentYear);
+          instance.input.value = flatpickr.formatDate(d, "m-d");
+        },
+      });
+    </script>
+    <script>
+      flatpickr("#datepicker2", {
+        dateFormat: "m-d", // Only month and day
+        defaultDate: "today",
+        onReady: function (selectedDates, dateStr, instance) {
+          instance.currentYearElement.style.display = "none"; // Hide year dropdown
+        },
+        onChange: function (selectedDates, dateStr, instance) {
+          // Always use current year internally to prevent year from affecting output
+          const d = selectedDates[0];
+          const currentYear = new Date().getFullYear();
+          d.setFullYear(currentYear);
+          instance.input.value = flatpickr.formatDate(d, "m-d");
+        },
+      });
     </script>
   </body>
 </html>

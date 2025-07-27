@@ -541,7 +541,7 @@
                           <th scope="col" class="pt-4">
                             Verifications completed
                           </th>
-                          <th scope="col" class="pt-4 no-wrap">
+                          <th scope="col" class="pt-4">
                             Verifications In Process
                           </th>
                           <th scope="col" class="pt-4">Status</th>
@@ -858,6 +858,10 @@
         const btnAgent = document.getElementById("btnagent");
         const btnBooking = document.getElementById("btnBooking");
         const btnSupervisor = document.getElementById("btnSupervisor");
+        // Table containers
+        const tableVerification = document.getElementById("table-verification");
+        const tableBooking = document.getElementById("table-booking");
+        const tableSupervisor = document.getElementById("table-supervisor");
 
         function setActive(btn) {
           btnAgent.classList.remove("active-emp-list");
@@ -865,17 +869,25 @@
           btnSupervisor.classList.remove("active-emp-list");
           btn.classList.add("active-emp-list");
         }
-
+        function showTable(table) {
+          tableVerification.style.display = "none";
+          tableBooking.style.display = "none";
+          tableSupervisor.style.display = "none";
+          table.style.display = "block";
+        }
         btnAgent.addEventListener("click", function () {
           setActive(btnAgent);
+          showTable(tableVerification);
           // Optionally show/hide tables here
         });
         btnBooking.addEventListener("click", function () {
           setActive(btnBooking);
+          showTable(tableBooking);
           // Optionally show/hide tables here
         });
         btnSupervisor.addEventListener("click", function () {
           setActive(btnSupervisor);
+          showTable(tableSupervisor);
           // Optionally show/hide tables here
         });
       });

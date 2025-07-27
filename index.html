@@ -27,7 +27,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,11 +46,9 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
-
     <!-- CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="../assets/css/Responsive.css" rel="stylesheet" />
-
     <!-- Font Awesome 6 CDN -->
     <link
       rel="stylesheet"
@@ -60,6 +57,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+      #datepicker , #datepicker2 {
+width: 3rem;
+      }
+    </style>
   </head>
   <div>
     <div class="position-relative bg-white d-flex p-0">
@@ -437,12 +441,33 @@
 
         <div class="container-fluid p-4">
           <div class="">
-            <p class="fs-4 fw-bold my-4 mt-0">General Dashboard</p>
+            <div class="d-flex justify-content-between">
+              <p class="fs-4 fw-bold my-4 mt-0">General Dashboard</p>
+              <div class="d-flex align-items-center gap-4">
+                <div class="d-flex gap-2">
+                  <input type="text" id="datepicker" placeholder="MM-DD" class="border-0" />
+                  -
+                  <input type="text" id="datepicker2" placeholder="MM-DD" class="border-0" />
+
+
+                </div>
+               <div class="">
+                <div class="px-4 py-2 d-flex justify-content-center align-items-center rounded-pill  bg-light ">
+                  <select name="" id="" class="bg-light border-0 small" >
+                    <option value="">This Week</option>
+                    <option value="">This Month</option>
+                    <option value="">This Year</option>
+
+                  </select>
+                </div>
+               </div>
+              </div>
+            </div>
             <div class=" ">
               <div class="row">
                 <div class="col-lg-4 col-xl-3 col-6">
                   <div class="card border-0 rounded-md card-shadow h-100">
-                    <div class="card-body p-3 px-4">
+                    <div class="card-body p-3 px-md-4">
                       <div
                         class="d-flex justify-content-between align-items-start"
                       >
@@ -459,7 +484,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-3 col-6">
                   <div class="card border-0 rounded-md card-shadow h-100">
-                    <div class="card-body p-3 px-4">
+                    <div class="card-body p-3 px-md-4">
                       <div
                         class="d-flex justify-content-between align-items-start"
                       >
@@ -476,7 +501,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-3 col-6">
                   <div class="card border-0 rounded-md card-shadow h-100">
-                    <div class="card-body p-3 px-4">
+                    <div class="card-body p-3 px-md-4">
                       <div
                         class="d-flex justify-content-between align-items-start"
                       >
@@ -495,7 +520,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-3 col-6">
                   <div class="card border-0 rounded-md card-shadow h-100">
-                    <div class="card-body p-3 px-4">
+                    <div class="card-body p-3 px-md-4">
                       <div
                         class="d-flex justify-content-between align-items-start"
                       >
@@ -815,9 +840,49 @@
                   >
                     <p class="fw-bold font-primary m-0">Sales by Vouchers</p>
                     <div class="d-flex justify-content-end">
-                      <div class="rounded-pill d-flex gap-2 p-2 px-4 border">
-                        <i class="bi bi-sliders2-vertical"></i>
-                        <span>Filter</span>
+                      <div class="position-relative">
+                        <div
+                          class="p-4 filter-box position-absolute bottom-75 shadow-sm bg-white rounded-md"
+                          id="filterBox"
+                          style="display: none"
+                        >
+                          <div class="d-flex gap-3">
+                            <input type="checkbox" name="" id="Awaiting" />
+                            <label for="Awaiting">Awaiting Pickup</label>
+                          </div>
+                          <div class="d-flex gap-3">
+                            <input type="checkbox" name="" id="Verification" />
+                            <label for="Verification">In Verification</label>
+                          </div>
+                          <div class="d-flex gap-3">
+                            <input type="checkbox" name="" id="Booking" />
+                            <label for="Booking">In Booking</label>
+                          </div>
+                          <div class="d-flex gap-3">
+                            <input type="checkbox" name="" id="Booked" />
+                            <label for="Booked">Booked</label>
+                          </div>
+                          <div class="d-flex gap-3">
+                            <input
+                              type="checkbox"
+                              name="Insufficient"
+                              id="Insufficient"
+                            />
+                            <label for="Insufficient">Insufficient Store Credit</label>
+                          </div>
+                          <div class="p-2 text-center">
+                            <button class="px-5 border rounded-pill bg-white py-2 mt-2">
+                              Done
+                            </button>
+                          </div>
+                        </div>
+                        <button
+                          id="filterBtn"
+                          type="button"
+                          class="d-flex gap-2 px-4 py-2 rounded-pill bg-light bg-white border shadow-sm"
+                        >
+                          <i class="bi bi-sliders2"></i> <span>Filter</span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1268,9 +1333,55 @@
         </div>
       </div>
     </div>
-  
     <!-- js file  -->
     <script src="../assets/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("filterBtn")
+          .addEventListener("click", function () {
+            var box = document.getElementById("filterBox");
+            if (box.style.display === "none" || box.style.display === "") {
+              box.style.display = "block";
+            } else {
+              box.style.display = "none";
+            }
+          });
+      });
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr("#datepicker", {
+    dateFormat: "m-d",       // Only month and day
+    defaultDate: "today",
+    onReady: function(selectedDates, dateStr, instance) {
+      instance.currentYearElement.style.display = "none"; // Hide year dropdown
+    },
+    onChange: function(selectedDates, dateStr, instance) {
+      // Always use current year internally to prevent year from affecting output
+      const d = selectedDates[0];
+      const currentYear = new Date().getFullYear();
+      d.setFullYear(currentYear);
+      instance.input.value = flatpickr.formatDate(d, "m-d");
+    }
+  });
+</script>
+<script>
+  flatpickr("#datepicker2", {
+    dateFormat: "m-d",       // Only month and day
+    defaultDate: "today",
+    onReady: function(selectedDates, dateStr, instance) {
+      instance.currentYearElement.style.display = "none"; // Hide year dropdown
+    },
+    onChange: function(selectedDates, dateStr, instance) {
+      // Always use current year internally to prevent year from affecting output
+      const d = selectedDates[0];
+      const currentYear = new Date().getFullYear();
+      d.setFullYear(currentYear);
+      instance.input.value = flatpickr.formatDate(d, "m-d");
+    }
+  });
+</script>
 
     <script>
       const ctx = document.getElementById("myDoughnutChart").getContext("2d");
@@ -1304,9 +1415,6 @@
     </script>
      <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Existing filterBtn code...
-        
-
         // Stacked Bar Chart
         var ctx = document.getElementById("stackedBarChart").getContext("2d");
         var stackedBarChart = new Chart(ctx, {

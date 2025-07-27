@@ -13,6 +13,7 @@ html {
 a {
   text-decoration: none;
   color: gray;
+  width: 100% !important;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -29,14 +30,6 @@ li {
 /* --------------- fonts ----------------  */
 .font-popins {
   font-family: "Inter", sans-serif;
-}
-
-/*  ----------------navbar -------  */
-.navbar-nav a {
-  width: 100%;
-}
-.sidebar .navbar-nav ul .nav-item {
-  width: 100% !important;
 }
 
 /* ----------- basic Style and color  ------------*/
@@ -190,6 +183,7 @@ table tr span {
   width: 10px;
   border-radius: 4rem;
 }
+.home-slide::-webkit-scrollbar,
 .sidebar::-webkit-scrollbar {
   width: 0px;
   /* Width of the scrollbar */
@@ -302,4 +296,24 @@ table tr span {
 .active--btn {
   color: #cf3da6 !important;
   border-bottom: 4px solid #cf3da6 !important;
+}
+
+/*  ----------------navbar -------  */
+.navbar-nav a {
+  width: 100%;
+}
+.sidebar .navbar-nav ul li a {
+  width: 100% !important;
+  display: block;
+}
+
+.sidebar > nav > div > a:first-of-type {
+  margin: 0 0 0 2rem !important;
+}
+.bi-toggle-on {
+  color: #cf3da6;
+}
+#datepicker,
+#datepicker2 {
+  width: 3rem;
 }
