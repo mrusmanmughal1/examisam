@@ -31,10 +31,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,10 +40,6 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet" />
@@ -514,10 +507,10 @@
                   <button
                     id="filterBtn"
                     type="button"
-                    class="d-flex gap-2 px-4 py-2 rounded-pill bg-primary-color text-white border shadow-sm"
+                    class="d-flex gap-2 px-4 py-2 rounded-pill bg-white border shadow-sm"
                   >
-                    <i class="bi bi-plus-circle"></i>
-                    <span>Add New VA Agent</span>
+                    <i class="bi bi-sliders2"></i>
+                    <span>Sort</span>
                   </button>
                 </div>
               </div>
@@ -900,7 +893,28 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script>
-      new DataTable("#agent");
+      var data = [
+        [
+          "Tiger Nixon",
+          "System Architect",
+          "Edinburgh",
+          "5421",
+          "2011/04/25",
+          "$3,120",
+        ],
+        [
+          "Garrett Winters",
+          "Director",
+          "Edinburgh",
+          "8422",
+          "2011/07/25",
+          "$5,300",
+        ],
+      ];
+      $("#agent").DataTable({
+        data: data,
+      });
+      // new DataTable("#agent");
     </script>
     <script>
       new DataTable("#Booking");
