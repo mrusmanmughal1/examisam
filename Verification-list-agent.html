@@ -610,7 +610,13 @@
                         <td class="align-middle small"><span>Usman</span></td>
                         <td class="align-middle">
                           <p class="m-0">
-                            <i class="bi bi-files"></i>
+                            <button
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              class="bg-white border-0"
+                            >
+                              <i class="bi bi-files"></i>
+                            </button>
                           </p>
                         </td>
 
@@ -642,105 +648,105 @@
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-xl">
               <div class="modal-content">
-                <div class="d-flex p-4 w-100 justify-content-between">
-                  <div class="modal-title" id="exampleModalLabel">
-                    <div class="fw-bold">List New Exam</div>
-                    <p class=" " style="font-size: 10px">
-                      <span>Exam Listing</span
-                      ><i class="bi bi-arrow-right-short"></i>
-                      <span>List New Product</span>
-                    </p>
+                <div class="border rounded-md border mx-4 my-4 p-4">
+                  <div class="container my-4">
+                    <h4 class="fw-bold">Booking Details</h4>
+                    <nav class="text-muted-small mb-4">
+                      Verifications
+                      <i class="bi bi-arrow-right-short"></i> Booking Details
+                    </nav>
+
+                    <div class="row">
+                      <!-- My PTE Account and Student Details -->
+                      <div class="col-md-6">
+                        <!-- Exam Type -->
+                        <div class="bg-light p-3 rounded-md">
+                          <p class="mb-2">Exam type :</p>
+
+                          <div class="">
+                            <img
+                              src="assets/images/dashboard/duo-voucher.svg"
+                              width="30px"
+                              alt="icon"
+                              class="icon"
+                            />
+                            <span>Pearson PTE UKVI Core</span>
+                          </div>
+                        </div>
+                        <div class="bg-light p-3 mt-2 rounded-md">
+                          <h6 class="fw-bold">My PTE Account:</h6>
+                          <p>
+                            <img
+                              src="https://img.icons8.com/material-outlined/24/000000/new-post.png"
+                              class="icon"
+                            />
+                            example@mail.com
+                          </p>
+                          <p>
+                            <img
+                              src="https://img.icons8.com/material-outlined/24/000000/lock--v1.png"
+                              class="icon"
+                            />
+                            326571801
+                          </p>
+
+                          <h6 class="fw-bold mt-4">Student Details:</h6>
+                          <p><span>First Name:</span> Shawaiz</p>
+                          <p><span>Last Name:</span> Iqbal</p>
+                          <p><span>Phone Number:</span> +92 315 1561882</p>
+                          <p><span>Email:</span> example@mail.com</p>
+                          <p><span>Date of Birth:</span> Jan 08,2000</p>
+
+                          <h6 class="fw-bold mt-4">Address Details:</h6>
+                          <p>
+                            <span>Street Address:</span> street 01, gujranwala,
+                            Pakistan
+                          </p>
+                          <p><span>City:</span> Gujranwala</p>
+                          <p><span>Country:</span> Pakistan</p>
+                          <p><span>Birth City:</span> Gujranwala</p>
+                          <p><span>Birth Country:</span> Pakistan</p>
+                        </div>
+                      </div>
+
+                      <!-- Exam Info and File -->
+                      <div class="col-md-6">
+                        <div class="bg-light p-3 rounded-md">
+                          <h6 class="fw-bold">Exam Information:</h6>
+                          <p><span>Test Type:</span> UKVI</p>
+                          <p><span>Preferred Test City:</span> Gujranwala</p>
+                          <p>
+                            <span>Preferred Test Center:</span> Opal institute
+                          </p>
+                          <p><span>Preferred Test Date:</span> 08 - 06 -2025</p>
+                          <p><span>Date of Birth:</span> Jan 08,2000</p>
+
+                          <h6 class="fw-bold mt-4">Attached File:</h6>
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="https://img.icons8.com/color/48/000000/pdf.png"
+                              class="pdf-icon"
+                            />
+                            <div>
+                              <strong>Passport Image</strong><br />
+                              <span class="text-muted-small">211KB</span>
+                            </div>
+                          </div>
+
+                          <h6 class="fw-bold mt-4">Additional Notes</h6>
+                          <p class="text-muted">
+                            Lorem ipsum dolor is a dummy text used as a
+                            placeholder. Lorem ipsum dolor is a dummy text used
+                            as a placeholder. Lorem ipsum dolor is a dummy text
+                            used as a placeholder.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="border rounded-md border mx-4 mb-4 p-4">
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Exam  Name"
-                    />
-                  </div>
-
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Price"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Discount"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="row mt-2 g-3">
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control ph-lg"
-                          placeholder="Quarterly Points on Each Purchase"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control ph-lg"
-                          placeholder="Yearly Points on Each Purchase"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control ph-lg"
-                          placeholder="Travel Points on Each Purchase"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="position-relative">
-                    <div class="upload-box mt-4">
-                      <div class="mb-2">
-                        <i
-                          class="bi bi-upload bg-primary-color py-2 rounded-pill text-white px-3"
-                        ></i>
-                      </div>
-                      <p class="mb-0">
-                        Drag & Drop or
-                        <a href="#" class="text-decoration-none text-pink"
-                          >choose file</a
-                        >
-                        to upload
-                      </p>
-                      <small class="text-muted"
-                        >Supported formats: .jpeg, .png</small
-                      >
-                      <input
-                        type="file"
-                        id="fileInput"
-                        hidden
-                        accept="image/png, image/jpeg"
-                      />
-                    </div>
-                  </div>
                   <div class="d-flex justify-content-end pt-4 gap-2">
                     <button
                       type="button"
