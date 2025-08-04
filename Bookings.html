@@ -543,86 +543,9 @@
                         color: rgb(144, 144, 144);
                       "
                     >
-                      <tr>
-                        <th scope="col " class="pt-4">Booking ID</th>
-                        <th scope="col" class="pt-4">Booking Name</th>
-                        <th scope="col" class="pt-4">Date</th>
-                        <th scope="col" class="pt-4">Agent Name</th>
-                        <th scope="col" class="pt-4">Agent ID</th>
-                        <th scope="col" class="pt-4">Amount</th>
-                        <th scope="col" class="pt-4">Amount</th>
-                        <th scope="col" class="pt-4">Payment_Method</th>
-                        <th scope="col" class="pt-4">Student Name</th>
-                        <th scope="col" class="pt-4">Transaction ID</th>
-                        <th scope="col" class="pt-4">Details</th>
-                        <th scope="col" class="pt-4">Status</th>
-                        <th scope="col" class="pt-4">Actions</th>
-                      </tr>
+                      <tr></tr>
                     </thead>
-                    <tbody class="text-secondary">
-                      <tr class="m-lg-5">
-                        <td class="py-lg-4 small">#7800001</td>
-                        <td class="py-lg-4" style="font-size: 12px">
-                          <div class="d-flex gap-2 align-items-center">
-                            <img
-                              src="assets/images/dashboard/duo-voucher.svg"
-                              width="30px"
-                              alt=""
-                            />
-                            <span class="fw-bold text-secondary"
-                              >Pearson PTE Voucher
-                            </span>
-                          </div>
-                        </td>
-                        <td class="py-lg-4 small">Jan,10 2020</td>
-                        <td class="py-lg-4">02</td>
-                        <td class="py-lg-4">
-                          <p class="m-0">Usman ilyas</p>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>8789798798</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>786.00</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>Store Credit</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>$90</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>89798789798</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span class="text-warning fw-bold">Booked</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            class="bi bi-copy"
-                            viewBox="0 0 16 16"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
-                            />
-                          </svg>
-                        </td>
-                        <td class="align-middle">
-                          <div class="d-flex">
-                            <span
-                              ><i class="bi bi-pencil-square"></i
-                              ><i class="bi bi-trash mx-2"></i>
-                              <i class="bi bi-three-dots"></i>
-                            </span>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
+                    <tbody class="text-secondary"></tbody>
                   </table>
                 </div>
               </div>
@@ -661,7 +584,67 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script>
-      new DataTable("#example");
+      const copy = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"></path>
+                          </svg>`;
+      const Table_data = [
+        [
+          "#7800001",
+          "Pearson PTE Voucher",
+          "Jan,10 2020",
+          "Usman ilyas",
+          "02",
+          "8789798798",
+          "Store Credit",
+          "Shawaiz",
+          "90",
+          copy,
+          `<span class="text-warning fw-bold">Booked</span>`,
+        ],
+      ];
+
+      let table = new DataTable("#example", {
+        columns: [
+          { title: "Booking ID" },
+          { title: "Booking Name" },
+          { title: "Date" },
+          { title: "Agent Name" },
+          { title: "Agent ID " },
+          { title: "Amount" },
+          {
+            title: "Payment Method",
+            className: "nowrap-header middle-center",
+          },
+
+          {
+            title: "Student Name",
+          },
+          { title: "Transaction ID" },
+          { title: "Details" },
+          { title: "Status" },
+          {
+            title: "Actions",
+            orderable: false,
+            searchable: false,
+            render: function () {
+              return `
+                <div class="d-flex ">
+                  <button class="btn btn-sm  " title="Edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                  <button class="btn btn-sm  " title="Delete">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                  <button class="btn btn-sm  " title="More">
+                    <i class="bi bi-three-dots"></i>
+                  </button>
+                </div>
+              `;
+            },
+          },
+        ],
+        data: Table_data,
+      });
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {

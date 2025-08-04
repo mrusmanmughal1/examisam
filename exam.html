@@ -980,25 +980,7 @@
               <div class="bg-white rounded-md p-2">
                 <div class="rounded-md table-responsive">
                   <table class="table rounded-md" id="example">
-                    <thead
-                      style="
-                        background-color: #f8f8f8;
-                        color: rgb(144, 144, 144);
-                        text-align: left;
-                      "
-                    >
-                      <tr>
-                        <th scope="col " class="pt-4">Sr No</th>
-                        <th scope="col" class="pt-4">Exam Name</th>
-                        <th scope="col" class="pt-4">Total Bookings</th>
-                        <th scope="col" class="pt-4">Price</th>
-                        <th scope="col" class="pt-4">Revenue</th>
-                        <th scope="col" class="pt-4">Profit</th>
-                        <th scope="col" class="pt-4">Top Buyers</th>
-                        <th scope="col" class="pt-4">Status</th>
-                        <th scope="col" class="pt-4">Action</th>
-                      </tr>
-                    </thead>
+                    <thead style=""></thead>
                     <tbody class="text-secondary">
                       <tr class="m-lg-5">
                         <td class="align-middle small">01</td>
@@ -1236,7 +1218,114 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script>
-      new DataTable("#example");
+      const buyersHTML = `
+  <div class="d-flex align-items-center position-relative" style="height: 40px;">
+    <div class="border rounded-pill overflow-hidden position-absolute start-0 top-0">
+      <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+    </div>
+    <div class="border rounded-pill overflow-hidden position-absolute top-0" style="left: 15px">
+      <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+    </div>
+    <div class="border rounded-pill overflow-hidden position-absolute top-0" style="left: 30px">
+      <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+    </div>
+    <div class="border rounded-pill overflow-hidden position-absolute top-0" style="left: 45px">
+      <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+    </div>
+    <span class="ms-5">
+      <a href="#" class="text-primary ms-5">View All</a>
+    </span>
+  </div>
+`;
+      const Table_data = [
+        [
+          "1",
+          "Pearson PTE Voucher",
+          "20",
+          "1000",
+          "$10,000",
+          "$8,788",
+          "$786.00",
+          "M.Usman, Ali, Sara, Ahmed, Fatima",
+          "Active",
+        ],
+        [
+          "2",
+          "IELTS Voucher",
+          "15",
+          "800",
+          "$8,000",
+          "$6,500",
+          "$500.00",
+          "John, Doe, Jane, Smith, Emily",
+          "Inactive",
+        ],
+        [
+          "3",
+          "TOEFL Voucher",
+          "30",
+          "1200",
+          "$12,000",
+          "$10,500",
+          "$1,200.00",
+          "Michael, Sarah, David, Laura, Chris",
+          "Active",
+        ],
+      ];
+      let table = new DataTable("#example", {
+        columns: [
+          { title: "Sr No" },
+          { title: "Exam Name" },
+          { title: "Total Bookings" },
+          { title: "Price" },
+          { title: "Revenue " },
+          { title: "Profit" },
+
+          {
+            title: "Top Buyers",
+            orderable: false,
+            searchable: false,
+            render: function () {
+              return buyersHTML;
+            },
+          },
+          {
+            title: "Status",
+            orderable: false,
+            searchable: false,
+            render: function () {
+              return `
+          <div class=" middle-center text-center">
+             <span onclick="toggleSwitch(this)"
+                            ><i class="bi bi-toggle-off fs-2"></i>
+                          </span>
+          </div>
+        `;
+            },
+          },
+          {
+            title: "Actions",
+            orderable: false,
+            searchable: false,
+            render: function () {
+              return `
+          <div class="d-flex ">
+            <button class="btn btn-sm  " title="Edit">
+              <i class="bi bi-pencil-square"></i>
+            </button>
+            <button class="btn btn-sm  " title="Delete">
+              <i class="bi bi-trash"></i>
+            </button>
+            <button class="btn btn-sm  " title="More">
+              <i class="bi bi-three-dots"></i>
+            </button>
+          </div>
+        `;
+            },
+          },
+        ],
+        data: Table_data,
+      });
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {

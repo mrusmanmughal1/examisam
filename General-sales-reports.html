@@ -654,55 +654,7 @@
             <div class="p-4 pt-0 shadow rounded-md">
               <div class="bg-white rounded-md p-2">
                 <div class="rounded-md table-responsive">
-                  <table class="table rounded-md Nunito" id="example">
-                    <thead
-                      style="
-                        background-color: #f8f8f8;
-                        text-align: left;
-                        color: rgb(144, 144, 144);
-                      "
-                    >
-                      <tr>
-                        <th scope="col " class="pt-4 ps-4">Agent Name</th>
-                        <th scope="col" class="pt-4">Agent ID</th>
-                        <th scope="col" class="pt-4">Consumer Number</th>
-                        <th scope="col" class="pt-4">Amount</th>
-                        <th scope="col" class="pt-4">Date</th>
-                        <th scope="col" class="pt-4">Time</th>
-                        <th scope="col" class="pt-4">Category</th>
-                        <th scope="col" class="pt-4">Bank Information</th>
-                        <th scope="col" class="pt-4">Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-secondary">
-                      <tr class="m-lg-5">
-                        <td class="py-lg-4 small ps-4">M. Usman</td>
-                        <td class="py-lg-4">
-                          <div class="d-flex gap-2 align-items-center">
-                            <span class="text-secondary">99999999 </span>
-                          </div>
-                        </td>
-                        <td class="py-lg-4">222222</td>
-                        <td class="py-lg-4">$300</td>
-                        <td class="py-lg-4">
-                          <p class="m-0">Sep 12, 2028</p>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>12:02:34 PM</span>
-                        </td>
-                        <td class="py-lg-4">Kuickpay</td>
-                        <td class="py-lg-4">
-                          <p class="m-0">ID: 12657199810</p>
-                          <p class="m-0 small">Meezan Bank</p>
-                        </td>
-                        <td class="py-lg-4">
-                          <div class="d-flex ps-3 gap-3">
-                            <i class="bi bi-trash3"></i>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <table class="table rounded-md Nunito" id="example"></table>
                 </div>
               </div>
             </div>
@@ -769,60 +721,7 @@
             <div class="p-4 pt-0 shadow rounded-md">
               <div class="bg-white rounded-md p-2">
                 <div class="rounded-md table-responsive">
-                  <table class="table rounded-md Nunito" id="example1">
-                    <thead
-                      style="
-                        background-color: #f8f8f8;
-                        text-align: left;
-                        color: rgb(144, 144, 144);
-                      "
-                    >
-                      <tr>
-                        <th scope="col " class="pt-4 ps-4">Transaction ID.</th>
-                        <th scope="col" class="pt-4">Agent Name</th>
-                        <th scope="col" class="pt-4">Agent ID</th>
-                        <th scope="col" class="pt-4">Date</th>
-                        <th scope="col" class="pt-4">Time</th>
-                        <th scope="col" class="pt-4">Amount</th>
-                        <th scope="col" class="pt-4">Voucher Bought</th>
-                        <th scope="col" class="pt-4">Quantity</th>
-                        <th scope="col" class="pt-4">Status</th>
-                        <th scope="col" class="pt-4">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-secondary">
-                      <tr class="m-lg-5">
-                        <td class="py-lg-4 small ps-4">#9999901</td>
-                        <td class="py-lg-4">
-                          <div class="d-flex gap-2 align-items-center">
-                            <span class="text-secondary">M.Shehzad </span>
-                          </div>
-                        </td>
-                        <td class="py-lg-4 small">90028292</td>
-                        <td class="py-lg-4">23, Sep 2020</td>
-                        <td class="py-lg-4">
-                          <p class="m-0">12 :20 PM</p>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>$400</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span> Pearson PTE</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <p class="m-0">1</p>
-                        </td>
-                        <td class="py-lg-4">
-                          <div class="text-success">Pending</div>
-                        </td>
-                        <td class="py-lg-4">
-                          <div class="d-flex ps-3 gap-3">
-                            <i class="bi bi-trash3"></i>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <table class="table rounded-md Nunito" id="example1"></table>
                 </div>
               </div>
             </div>
@@ -903,11 +802,100 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script>
-      new DataTable("#example");
+      let agentData = [
+        [
+          "M. Usman",
+          "99999999",
+          "222222",
+          "$300",
+          "Sep 12, 2028",
+          "12:02:34 PM",
+          "Kuickpay",
+          `<p class="m-0">ID: 12657199810</p><p class="m-0 small">Meezan Bank</p>`,
+          "", // Placeholder for icons
+        ],
+      ];
+
+      let table = new DataTable("#example", {
+        data: agentData,
+        columns: [
+          { title: "Agent Name" },
+          { title: "Agent ID" },
+          {
+            title: "Consumer Number",
+            className: "nowrap-header middle-center",
+          },
+          { title: "Amount" },
+          { title: "Date" },
+          { title: "Time" },
+          { title: "Category" },
+          {
+            title: "Bank Information",
+            className: "nowrap-header middle-center",
+          },
+          {
+            title: "Actions",
+            orderable: false,
+            searchable: false,
+            render: function () {
+              return `
+            <div class="d-flex ps-3 gap-3">
+              <i class="bi bi-trash3"></i>
+            </div>
+          `;
+            },
+          },
+        ],
+      });
     </script>
+
     <script>
-      new DataTable("#example1");
+      let transactionData = [
+        [
+          "#9999901", // Transaction ID
+          "M. Shehzad", // Agent Name
+          "90028292", // Agent ID
+          "23, Sep 2020", // Date
+          "12 :20 PM", // Time
+          "$400", // Amount
+          "Pearson PTE", // Voucher Bought
+          "1", // Quantity
+          `<div class="text-success">Pending</div>`, // Status
+          "", // Actions will be rendered
+        ],
+      ];
+
+      let table2 = new DataTable("#example1", {
+        data: transactionData,
+        columns: [
+          { title: "Transaction ID" },
+          { title: "Agent Name" },
+          { title: "Agent ID" },
+          { title: "Date" },
+          { title: "Time" },
+          { title: "Amount" },
+          { title: "Voucher Bought" },
+          { title: "Quantity" },
+          {
+            title: "Status",
+            className: "nowrap-header middle-center",
+          },
+          {
+            title: "Action",
+            orderable: false,
+            searchable: false,
+            render: function () {
+              return `
+            <div class="d-flex ps-3 gap-3">
+              <i class="bi bi-trash3"></i>
+            </div>
+          `;
+            },
+          },
+        ],
+      });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       flatpickr("#datepicker", {

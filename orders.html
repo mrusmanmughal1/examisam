@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up -Agent-protal-Examism</title>
+    <title>Agent-protal-Examism</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Chart.js CDN -->
     <!-- Favicons -->
@@ -549,68 +549,8 @@
               <div class="bg-white rounded-md p-2">
                 <div class="rounded-md table-responsive">
                   <table class="table rounded-md text-secondary" id="example">
-                    <thead style="background-color: #f8f8f8; text-align: left">
-                      <tr>
-                        <th scope="col " class="pt-4">ID</th>
-                        <th scope="col" class="pt-4">Product Name</th>
-                        <th scope="col" class="pt-4">Quantity</th>
-                        <th scope="col" class="pt-4">Date</th>
-                        <th scope="col" class="pt-4">AgentName</th>
-                        <th scope="col" class="pt-4">Agent ID</th>
-                        <th scope="col" class="pt-4">Amount</th>
-                        <th scope="col" class="pt-4 no-wrap">Payment Method</th>
-                        <th scope="col" class="pt-4">Profit</th>
-                        <th scope="col" class="pt-4">Transaction ID</th>
-                        <th scope="col" class="pt-4">Status</th>
-                        <th scope="col" class="pt-4">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="m-lg-5">
-                        <td class="py-lg-4 small">#7800001</td>
-                        <td class="py-lg-4" style="font-size: 12px">
-                          <p class="m-0">
-                            Current Date :<span class="fw-bold"
-                              >24-10-2025 18:10:40
-                            </span>
-                          </p>
-                        </td>
-                        <td class="py-lg-4">02</td>
-                        <td class="py-lg-4 small">Jan,10 2020</td>
-                        <td class="py-lg-4">
-                          <p class="m-0">Usman ilyas</p>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>8789798798</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>786.00</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>Store Credit</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>$90</span>
-                        </td>
-                        <td class="py-lg-4">
-                          <span>89798789798</span>
-                        </td>
-                        <td class="align-middle">
-                          <div class="d-flex">
-                            <span class="text-warning"> Pending </span>
-                          </div>
-                        </td>
-                        <td class="align-middle">
-                          <div class="d-flex">
-                            <span
-                              ><i class="bi bi-pencil-square"></i
-                              ><i class="bi bi-trash mx-2"></i>
-                              <i class="bi bi-three-dots"></i>
-                            </span>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
+                    <thead></thead>
+                    <tbody></tbody>
                   </table>
                 </div>
               </div>
@@ -637,7 +577,85 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script>
-      new DataTable("#example");
+      const buyersHTML = `
+        <div class="d-flex align-items-center position-relative" style="height: 40px;">
+          <div class="border rounded-pill overflow-hidden position-absolute start-0 top-0">
+            <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+          </div>
+          <div class="border rounded-pill overflow-hidden position-absolute top-0" style="left: 15px">
+            <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+          </div>
+          <div class="border rounded-pill overflow-hidden position-absolute top-0" style="left: 30px">
+            <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+          </div>
+          <div class="border rounded-pill overflow-hidden position-absolute top-0" style="left: 45px">
+            <img src="assets/images/dashboard/members/1.png" width="30px" alt="" />
+          </div>
+          <span class="ms-5">
+            <a href="#" class="text-primary ms-5">View All</a>
+          </span>
+        </div>
+      `;
+      const status = `<div class="m-0 small">
+        <span class="  text-warning  ">Pending</span>
+                          </div>`;
+      const Table_data = [
+        [
+          "1",
+          "Pearson PTE Voucher",
+          "15",
+          "Jan 10, 2020",
+          "Muhammad Usman",
+          "898908",
+          "$500.00",
+          "Store Credit",
+          "$90.00",
+          "89798789798",
+          status,
+        ],
+      ];
+      let table = new DataTable("#example", {
+        columns: [
+          { title: "ID" },
+          { title: " Product Name" },
+          { title: "Quantity" },
+          { title: "Date" },
+          { title: "Agent Name " },
+          { title: "Agent ID" },
+          {
+            title: "Amount",
+          },
+
+          {
+            title: "Payment Method",
+            className: "nowrap-header middle-center",
+          },
+          { title: "Profit" },
+          { title: "Transaction ID" },
+          { title: "Status" },
+          {
+            title: "Actions",
+            orderable: false,
+            searchable: false,
+            render: function () {
+              return `
+                <div class="d-flex ">
+                  <button class="btn btn-sm  " title="Edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                  <button class="btn btn-sm  " title="Delete">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                  <button class="btn btn-sm  " title="More">
+                    <i class="bi bi-three-dots"></i>
+                  </button>
+                </div>
+              `;
+            },
+          },
+        ],
+        data: Table_data,
+      });
     </script>
 
     <script>

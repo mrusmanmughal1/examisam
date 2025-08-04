@@ -209,7 +209,7 @@ table tr span {
 
 .admin-main {
   margin-left: 280px;
-  border-bottom: 2 px solid rgb(246, 244, 244);
+  border-bottom: 2px solid rgb(246, 244, 244);
   font-family: "Inter", sans-serif;
   flex: 1 1 0%;
   min-width: 0;
@@ -333,4 +333,23 @@ table tr span {
   color: #dc3545; /* red */
   transform: scale(1);
   opacity: 0.7;
+}
+
+thead {
+  background-color: #f8f8f8;
+  color: #8e95a9;
+  text-align: left;
+}
+th {
+  padding-top: 2rem !important;
+}
+
+th.nowrap-header {
+  padding-top: 0rem !important;
+
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+}
+tbody {
+  color: #555f7e;
 }
